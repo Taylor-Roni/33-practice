@@ -1,0 +1,112 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 140%;
+}
+
+.wrapper{
+	width: 100%;
+	color: grey;
+}
+
+.logo img{
+	padding: 10px 20px;
+	width: 10%;
+}
+
+.menu{
+  font-family: Helvetica;
+  font-weight: lighter;
+  padding-bottom: 20px;
+  position: fixed;
+  padding-top: 3.5%;
+  padding-left: 10%;
+}
+
+h2{
+  font-family: Helvetica;
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 10%;
+}
+
+.bannerText{
+	width: 100%;
+	position: relative;
+	margin-top: -40%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    margin-top: 0;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #B3B3B5;
+}
+
+
+img{
+	max-width: 100%;
+}
+
+.logo { grid-area: logo;}
+.social { grid-area: social;}
+.banner { grid-area: banner;}
+.sidebar { grid-area: sidebar;}
+.content { grid-area: content;}
+.footer { grid-area: footer;
+background-color: grey;
+color: white;
+padding: 10px;
+text-align: center;}
+.wrapper{
+	display: grid;
+	grid-template-areas:
+	"logo"
+	"social"
+	"banner"
+	"content"
+	"sidebar"
+	"footer";
+}
+
+
+@media only screen and (min-width:500px){
+	.wrapper{
+		grid-template-columns: 20% auto;
+		grid-template-areas:
+		"logo logo"
+		"social social"
+		"banner banner"
+		"content content"
+		"sidebar sidebar"
+		"footer footer"
+	}
+}
+
+@media only screen and (min-width: 600px){
+	.wrapper{
+		grid-template-columns: 200px auto 350px;
+		grid-template-areas:
+		"logo logo social"
+		"banner banner banner"
+		"content content sidebar"
+		"footer footer footer"
+	}
+}
